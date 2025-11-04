@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda | Valorant FPS Analyzer</title>
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="../Assets/Logo_valo.png" alt="Valorant Logo" class="logo">
+                <span class="app-name">Valorant FPS Analyzer</span>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="active">
+                    <i class="fas fa-home"></i>
+                    Beranda
+                </a>
+                <a href="diagnosa.html">
+                    <i class="fas fa-stethoscope"></i>
+                    Diagnosa
+                </a>
+                <a href="profil.html">
+                    <i class="fas fa-user"></i>
+                    Profil
+                </a>
+                <a href="login.html" class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Keluar
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="welcome-section">
+                <h1>Welcome, <span id="playerName" class="highlight">Player</span>!</h1>
+                <p class="subtitle">Tingkatkan skill Valorant-mu dengan analisis kelemahan FPS yang akurat dan personalized</p>
+            </div>
+            
+            <div class="stats-overview">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalDiagnoses">0</div>
+                    <div class="stat-label">Total Diagnosa</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="improvementRate">-</div>
+                    <div class="stat-label">Tingkat Improvement</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Diagnosa Cepat</h3>
+                    <p>5 pertanyaan mendalam untuk analisis gameplay yang komprehensif</p>
+                    <div class="feature-time">
+                        <i class="fas fa-clock"></i>
+                        ~5 menit
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Hasil Detail</h3>
+                    <p>Laporan lengkap dengan tips improvement yang spesifik untuk skillmu</p>
+                    <div class="feature-time">
+                        <i class="fas fa-file-alt"></i>
+                        Laporan PDF
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Riwayat Progress</h3>
+                    <p>Pantau perkembangan skill dari waktu ke waktu dengan grafik interaktif</p>
+                    <div class="feature-time">
+                        <i class="fas fa-chart-bar"></i>
+                        Tracking
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <button class="cta-btn" onclick="window.location.href='diagnosa.html'">
+                    <i class="fas fa-rocket"></i>
+                    Mulai Diagnosa Sekarang
+                </button>
+                <p class="cta-note">
+                    <i class="fas fa-lightbulb"></i>
+                    Sudah lebih dari 1,000 player meningkatkan skill mereka!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../Assets/Logo_valo.png" alt="Valorant Logo" class="footer-logo-img">
+                    <h3>Valorant FPS Analyzer</h3>
+                </div>
+                <p>Sistem pakar untuk menganalisis dan meningkatkan skill bermain Valorant secara efektif</p>
+                <div class="app-version">v2.1.0</div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Menu Cepat</h3>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Beranda
+                </a>
+                <a href="diagnosa.html">
+                    <i class="fas fa-stethoscope"></i>
+                    Diagnosa
+                </a>
+                <a href="profil.html">
+                    <i class="fas fa-user"></i>
+                    Profil
+                </a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                        TikTok
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-discord"></i>
+                        Discord
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support & Help</h3>
+                <a href="mailto:support@fazis5719.com" class="support-link">
+                    <i class="fas fa-envelope"></i>
+                    support@fazis5719.com
+                </a>
+                <a href="https://wa.me/6281234567890" class="support-link">
+                    <i class="fab fa-whatsapp"></i>
+                    +62 812-3456-7890
+                </a>
+                <div class="support-hours">
+                    <i class="fas fa-clock"></i>
+                    Support: 09:00 - 21:00 WIB
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Valorant FPS Analyzer. All rights reserved. | By Fauzan Azis</p>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

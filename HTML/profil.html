@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil | Valorant FPS Analyzer</title>
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/profil.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="../Assets/Logo_valo.png" alt="Valorant Logo" class="logo">
+                <span class="app-name">Valorant FPS Analyzer</span>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Beranda
+                </a>
+                <a href="diagnosa.html">
+                    <i class="fas fa-stethoscope"></i>
+                    Diagnosa
+                </a>
+                <a href="profil.html" class="active">
+                    <i class="fas fa-user"></i>
+                    Profil
+                </a>
+                <a href="login.html" class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Keluar
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="profile-main">
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="avatar-section">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="profileName">Loading...</h2>
+                        <p class="player-rank">
+                            <i class="fas fa-trophy"></i>
+                            <span id="playerRank">Unranked Player</span>
+                        </p>
+                        <p class="member-since">
+                            <i class="fas fa-calendar-alt"></i>
+                            Member sejak: <span id="memberSince">-</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="edit-profile-btn" onclick="editProfile()">
+                    <i class="fas fa-edit"></i>
+                    Edit Profil
+                </button>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="profile-stats">
+                <h3><i class="fas fa-chart-bar"></i> Statistik Performa</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <span class="stat-number" id="totalDiagnosa">0</span>
+                        <span class="stat-label">Total Diagnosa</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <span class="stat-number" id="lastActivity">-</span>
+                        <span class="stat-label">Aktivitas Terakhir</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trending-up"></i>
+                        </div>
+                        <span class="stat-number" id="improvementScore">-</span>
+                        <span class="stat-label">Improvement Score</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <span class="stat-number" id="completionRate">0%</span>
+                        <span class="stat-label">Completion Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Overview -->
+            <div class="progress-overview">
+                <h3><i class="fas fa-chart-line"></i> Progress Overview</h3>
+                <div class="progress-chart">
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-bar"></i>
+                        <p>Grafik progress akan ditampilkan di sini</p>
+                        <small>Mulai diagnosa untuk melihat progress-mu</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-history"></i> Riwayat Diagnosa</h3>
+                    <button class="clear-history-btn" onclick="clearHistory()">
+                        <i class="fas fa-trash"></i>
+                        Hapus Riwayat
+                    </button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <!-- History will be loaded by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="profile-actions">
+                <button class="action-btn primary" onclick="window.location.href='diagnosa.html'">
+                    <i class="fas fa-plus"></i>
+                    Diagnosa Baru
+                </button>
+                <button class="action-btn secondary" onclick="exportData()">
+                    <i class="fas fa-download"></i>
+                    Export Data
+                </button>
+                <button class="logout-btn-large" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Keluar Akun
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Player Support</h3>
+                <p>Butuh bantuan dengan analisis skill-mu?</p>
+                <a href="mailto:support@valorantanalyzer.com" class="support-link">
+                    <i class="fas fa-headset"></i>
+                    support@valorantanalyzer.com
+                </a>
+            </div>
+            <div class="footer-section">
+                <h3>Join Community</h3>
+                <p>Diskusi dengan player lain</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-discord"></i>
+                        Discord
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-reddit"></i>
+                        Reddit
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="#" class="resource-link">
+                    <i class="fas fa-book"></i>
+                    Tips & Panduan
+                </a>
+                <a href="#" class="resource-link">
+                    <i class="fas fa-video"></i>
+                    Video Tutorial
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Valorant FPS Analyzer | By Fauzan Azis</p>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

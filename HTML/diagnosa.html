@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosa | Valorant FPS Analyzer</title>
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/diagnosa.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/modal.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="../Assets/Logo_valo.png" alt="Valorant Logo" class="logo">
+                <span class="app-name">Valorant FPS Analyzer</span>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Beranda
+                </a>
+                <a href="diagnosa.html" class="active">
+                    <i class="fas fa-stethoscope"></i>
+                    Diagnosa
+                </a>
+                <a href="profil.html">
+                    <i class="fas fa-user"></i>
+                    Profil
+                </a>
+                <a href="login.html" class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Keluar
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="diagnosa-main">
+        <div class="diagnosa-container">
+            <div class="diagnosa-header">
+                <h1>Analisis Skill FPS</h1>
+                <p>Jawab 5 pertanyaan untuk mendapatkan analisis mendalam tentang kelemahan FPS-mu</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span class="progress-text" id="progressText">Pertanyaan 1/5</span>
+                    <span class="progress-percentage" id="progressPercentage">20%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-category" id="progressCategory">Aim & Dueling</div>
+            </div>
+            
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number">Q<span id="currentQuestionNumber">1</span></span>
+                    <span class="question-category" id="questionCategory">Aim & Dueling</span>
+                </div>
+                
+                <h2 class="question" id="questionText">Memuat pertanyaan...</h2>
+                
+                <div class="options-container" id="optionsContainer">
+                    <!-- Options will be loaded by JavaScript -->
+                </div>
+
+                <div class="question-navigation">
+                    <button class="nav-btn prev-btn" onclick="previousQuestion()" id="prevButton" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Sebelumnya
+                    </button>
+                    <div class="question-counter">
+                        <span id="currentQuestion">1</span> / 5
+                    </div>
+                    <button class="nav-btn next-btn" onclick="nextQuestion()" id="nextButton">
+                        Selanjutnya
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="diagnosa-tips">
+                <div class="tip-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <div class="tip-content">
+                        <strong>Tips:</strong> Jawab dengan jujur berdasarkan pengalaman bermainmu untuk hasil analisis yang akurat
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Valorant FPS Analyzer</h3>
+                <p>Analyze. Improve. Dominate.</p>
+                <div class="feature-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    Analisis Terpercaya
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Development</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        Updates
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                        Tips
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                        Tutorials
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Need Help?</h3>
+                <a href="mailto:support@fazis5719.com" class="support-link">
+                    <i class="fas fa-question-circle"></i>
+                    Bantuan Diagnosa
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Valorant FPS Analyzer | By Fauzan Azis</p>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

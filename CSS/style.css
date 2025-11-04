@@ -1,0 +1,277 @@
+/* === IMPORT FONT === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* === RESET DAN DASAR === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('../Assets/valorant\ jet\ logo\ 1.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === HEADER / NAVBAR === */
+header {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+  border-bottom: 2px solid #ff4655;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+header img {
+  height: 50px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #ff4655;
+}
+
+/* === HERO SECTION / BERANDA === */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  padding: 40px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #ff4655;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  max-width: 700px;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background: #ff4655;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #e03a48;
+  transform: scale(1.05);
+}
+
+/* === LOGIN PAGE === */
+.login-container {
+  margin: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.3);
+  max-width: 400px;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.login-container .logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.login-container h1 {
+  margin-bottom: 25px;
+  font-size: 1.5em;
+  color: #ff4655;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.login-container input:focus {
+  border-color: #ff4655;
+  box-shadow: 0 0 10px #ff4655;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background: #ff4655;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background: #e03a48;
+  transform: scale(1.05);
+}
+
+/* === DIAGNOSA PAGE === */
+.diagnosa-container {
+  max-width: 700px;
+  margin: 100px auto;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 70, 85, 0.3);
+  display: block;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.question {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ff4655;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option-btn:hover {
+  background: #ff4655;
+  border-color: #ff4655;
+}
+
+/* === PROFIL PAGE === */
+.profile-container {
+  max-width: 700px;
+  margin: 100px auto;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 70, 85, 0.3);
+  text-align: left;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.profile-container h2 {
+  color: #ff4655;
+  margin-bottom: 10px;
+}
+
+.profile-container h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #ff4655;
+}
+
+.profile-container p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.profile-container ul {
+  list-style: none;
+  background: rgba(20, 20, 20, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.profile-container ul li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-container button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff4655;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-container button:hover {
+  background: #e03a48;
+  transform: scale(1.05);
+}
+
+/* === FOOTER === */
+footer {
+  position: fixed;        /* biar selalu nempel di bawah layar */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #aaa;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  border-top: 1px solid #ff4655; /* garis merah khas Valorant */
+  z-index: 10; /* supaya gak ketiban elemen lain */
+}
+
+/* Biar footer gak nutupin konten pas halaman panjang */
+body {
+  padding-bottom: 60px;
+}
+
+/* === ANIMASI === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
